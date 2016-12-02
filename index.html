@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="simeia">
+<head>
+  <title>Σημεία και Τέρατα</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="stylesheet" type="text/css" href="static/lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="static/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/app.css">
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+
+        <div class="page-header">
+          <a href="#/home/">
+            <img alt="Σημεία και Τέρατα" class="logo img-responsive" src="static/img/terata_header.png">
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" id="main">
+
+      <div class="row">
+        <div class="col-sm-2 visible-xs-block" id="menu">
+          <ul class="nav nav-pills nav-stacked">
+            <li role="presentation"><a href="#/tigiati/">Τι/Γιατί</a></li>
+            <li role="presentation"><a href="#/programma/">Πρόγραμμα</a></li>
+            <li role="presentation"><a href="#/xartis/">Χάρτης</a></li>
+            <li role="presentation"><a href="#/simmetexoun/">Συμμετέχουν</a></li>
+            <li role="presentation"><a href="#/arxeio/">Αρχείο</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-10" id="content">
+          <div ng-view>
+          </div>
+        </div>
+
+        <div class="col-sm-2 hidden-xs" id="menu">
+          <ul class="nav nav-pills nav-stacked">
+            <li role="presentation"><a href="#/tigiati/">Τι/Γιατί</a></li>
+            <li role="presentation"><a href="#/programma/">Πρόγραμμα</a></li>
+            <li role="presentation"><a href="#/xartis/">Χάρτης</a></li>
+            <li role="presentation"><a href="#/simmetexoun/">Συμμετέχουν</a></li>
+            <li role="presentation"><a href="#/arxeio/">Αρχείο</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+
+  <div class="container">
+    <div id="footer">
+      <span class="fa fa-cc"></span>
+      2016<!--<script>document.write("-"+new Date().getFullYear());</script>--> &bull;
+      <i class="fa fa-envelope-o"></i> <img src="static/img/email.png" alt="contact">
+    </div>
+  </div>
+
+  <script src="static/lib/jquery/dist/jquery.min.js"></script>
+  <script src="static/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="static/lib/angular/angular.min.js"></script>
+  <script src="static/lib/angular-route/angular-route.min.js"></script>
+  <script src="static/lib/angular-ui/build/angular-ui.min.js"></script>
+  <script src="static/lib/angular-loading-bar/build/loading-bar.min.js"></script>
+  <script src="static/js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "simeiakaiterata",
+  "description": "simeiakaiterata.gr web app",
+  "version": "0.0.1",
+  "homepage": "https://github.com/comzeradd/simeiakaiterata.gr",
+  "license": "AGPL",
+  "dependencies": {
+    "angular": "1.4.x",
+    "jquery": "2.1.4",
+    "mapbox.js": "2.2.x",
+    "bootstrap": "3.3.6",
+    "font-awesome": "4.5.0",
+    "angular-route": "1.4.x",
+    "angular-ui": "0.4.x",
+    "angular-loading-bar": "0.9.x"
+  }
+}
