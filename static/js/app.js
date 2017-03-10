@@ -3,6 +3,15 @@ var simeia = angular.module('simeia', ['ngRoute', 'angular-loading-bar'])
         cfpLoadingBarProvider.includeSpinner = false;
     }]);
 
+simeia.controller('zineCtrl', function ($scope, $routeParams, $location, $http) {
+    if ($routeParams.zineid) {
+        $scope.zineid = $routeParams.zineid;
+        console.log($routeParams.zineid);
+    } else {
+        $location.path('#/simmetexoun/');
+    }
+});
+
 simeia.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
@@ -23,6 +32,9 @@ simeia.config(['$routeProvider',
             }).
             when('/arxeio', {
                 templateUrl: 'partials/arxeio.html'
+            }).
+            when('/zines/:zineid', {
+                templateUrl: 'partials/zine.html'
             }).
             otherwise('/');
     }
