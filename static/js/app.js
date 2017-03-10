@@ -6,9 +6,16 @@ var simeia = angular.module('simeia', ['ngRoute', 'angular-loading-bar'])
 simeia.controller('zineCtrl', function ($scope, $routeParams, $location, $http) {
     if ($routeParams.zineid) {
         $scope.zineid = $routeParams.zineid;
-        console.log($routeParams.zineid);
     } else {
         $location.path('#/simmetexoun/');
+    }
+});
+
+simeia.controller('drasiCtrl', function ($scope, $routeParams, $location, $http) {
+    if ($routeParams.slug) {
+        $scope.slug = $routeParams.slug;
+    } else {
+        $location.path('#/arxeio/');
     }
 });
 
@@ -33,8 +40,11 @@ simeia.config(['$routeProvider',
             when('/arxeio', {
                 templateUrl: 'partials/arxeio.html'
             }).
+            when('/draseis/:slug', {
+                templateUrl: 'partials/draseis.html'
+            }).
             when('/zines/:zineid', {
-                templateUrl: 'partials/zine.html'
+                templateUrl: 'partials/zines.html'
             }).
             otherwise('/');
     }
