@@ -40,6 +40,9 @@ simeia.config(['$routeProvider',
             when('/arxeio', {
                 templateUrl: 'partials/arxeio.html'
             }).
+            when('/blog', {
+                templateUrl: 'partials/blog.html'
+            }).
             when('/draseis/:slug', {
                 templateUrl: 'partials/draseis.html'
             }).
