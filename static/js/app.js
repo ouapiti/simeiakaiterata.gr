@@ -19,6 +19,14 @@ simeia.controller('drasiCtrl', function ($scope, $routeParams, $location, $http)
     }
 });
 
+simeia.controller('blogCtrl', function ($scope, $routeParams, $location, $http) {
+    if ($routeParams.postid) {
+        $scope.postid = $routeParams.postid;
+    } else {
+        $location.path('#/blog/');
+    }
+});
+
 simeia.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
@@ -42,6 +50,9 @@ simeia.config(['$routeProvider',
             }).
             when('/blog', {
                 templateUrl: 'partials/blog.html'
+            }).
+            when('/blog/:postid', {
+                templateUrl: 'partials/posts.html'
             }).
             when('/draseis/:slug', {
                 templateUrl: 'partials/draseis.html'
